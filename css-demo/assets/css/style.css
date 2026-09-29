@@ -25,3 +25,44 @@ html {
 body{
     background-color:rgb(39, 96, 39);
 }
+body{
+.michroma-regular 
+  font-family: "Michroma", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  margin:0;
+}
+header.primary{
+  background-color:#3b6b8b;
+  color:#ffffff;
+  text-align:center;
+  text-shadow:1px 1px #000000;
+}
+
+header.primary a{
+  color: #ffffff;
+text-decoration: none;
+}
+
+header.primary h1{
+  font-size: 2.5rem;
+  margin: 0;
+}
+
+header.primary p.subtitle{
+font-size:1.3rem;
+font-weight:bold;
+/* top | l/r |bottom */
+margin:10px 0 20px;
+letter-spacing: 1px;
+}
+
+nav.primary ul {
+  background:red;
+padding:0;
+}
+nav.primary ul li {
+  background:green;
+list-style-type:none;
+}
+nav.primary ul li a{}
