@@ -7,8 +7,7 @@ html {
 *:after {
   box-sizing: inherit;
 }
- 
- 
+
 /* Skip link utility: hidden until focused */
 .visually-hidden {
   border: 0;
@@ -22,47 +21,91 @@ html {
   width: 1px;
 }
 
-body{
-    background-color:rgb(39, 96, 39);
-}
-body{
-.michroma-regular 
-  font-family: "Michroma", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  margin:0;
-}
-header.primary{
-  background-color:#3b6b8b;
-  color:#ffffff;
-  text-align:center;
-  text-shadow:1px 1px #000000;
+/* ---------------utility classes----------------- */
+
+.container {
+  width:80vw;
+  max-width: 960px
+  margin: 40px auto;
 }
 
-header.primary a{
-  color: #ffffff;
-text-decoration: none;
-}
 
-header.primary h1{
-  font-size: 2.5rem;
+
+
+
+/* ---------------Global Styles----------------- */
+
+body {
+ font-family: "Michroma", sans-serif;
   margin: 0;
 }
 
-header.primary p.subtitle{
-font-size:1.3rem;
-font-weight:bold;
-/* top | l/r |bottom */
-margin:10px 0 20px;
-letter-spacing: 1px;
+header.primary {
+  background-color: #3b6b8b;
+  color: #ffffff;
+  text-align: center;
+  text-shadow: 1px 1px #000000;
+  padding: 40px;
+  /* Longform */
+  padding-top: 40px;
+  padding-right: 40px;
+  padding-bottom: 40px;
+  padding-left: 40px;
+  /* T/R/B/L */
+  padding: 40px 40px 20px 40px;
+  /* T/B | L/R */
+  padding: 20px 40px;
+}
+
+header.primary a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+header.primary h1 {
+  font-size: 2.6rem;
+  margin: 0;
+}
+
+header.primary p.subtitle {
+  font-size: 1.3rem;
+  font-weight: bold;
+  /* top | l/r | Bottom */
+  margin: 10px 0 20px;
+  letter-spacing: -1px;
 }
 
 nav.primary ul {
-  background:red;
-padding:0;
+  padding: 0;
+  display:flex;
+  flex-direction: row;
+  justify-content: center;
+  gap:30px;
 }
 nav.primary ul li {
-  background:green;
-list-style-type:none;
+  list-style-type: none;
+  flex: 1;
 }
-nav.primary ul li a{}
+nav.primary ul li a {
+  background-color:rgba(0,0,0,.4);
+  padding: 5px 7.5px;
+  display: block;
+  border: 4px outset #000;
+  border-radius: 8px;
+  transition: .5s;
+}
+
+nav.primary ul li a:hover{
+  background-color:rgba(0,0,0,.8);
+}
+
+
+
+
+
+/*----------------media queries-----------------*/
+@media screen and (max-width:500px){
+  nav.primary ul {
+  flex-direction: column;
+  gap:10px;
+}
