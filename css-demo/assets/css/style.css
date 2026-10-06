@@ -8,6 +8,12 @@ html {
   box-sizing: inherit;
 }
 
+/* ---------------Responsive Images----------------- */
+img{
+  max-width:100%;
+}
+
+
 /* Skip link utility: hidden until focused */
 .visually-hidden {
   border: 0;
@@ -21,28 +27,18 @@ html {
   width: 1px;
 }
 
+/* ---------------Utility Classes----------------- */
 
-/* ---------------resonspive images----------------- */
-img{
-  max-width:100%;
-}
-
-/* ---------------utility classes----------------- */
-
-.container {
-  max-width: 960px;
+.container{
   width:80vw;
+  max-width:960px;
   margin: 40px auto;
 }
 
 
-
-
-
-/* ---------------Global Styles----------------- */
-
+/* ---------------Global styles----------------- */
 body {
- font-family: "Michroma", sans-serif;
+ font-family: "Lato", sans-serif;
   margin: 0;
 }
 
@@ -84,7 +80,7 @@ header.primary p.subtitle {
 nav.primary ul {
   padding: 0;
   display:flex;
-  flex-direction: row;
+  flex-direction:row;
   justify-content: center;
   gap:30px;
 }
@@ -92,61 +88,42 @@ nav.primary ul li {
   list-style-type: none;
   flex: 1;
 }
-nav.primary ul li a {
+nav.primary ul li a:link {
   background-color:rgba(0,0,0,.4);
   padding: 5px 7.5px;
-  display: block;
-  border: 4px outset #000;
+  display:block;
+  border: 1px solid #000;
   border-radius: 8px;
-  transition: .5s;
+  transition:.3s;
 }
 
 nav.primary ul li a:hover{
   background-color:rgba(0,0,0,.8);
 }
 
-
-
-
-
-/*----------------media queries-----------------*/
-@media screen and (max-width:500px){
-  nav.primary ul {
-  flex-direction: column;
-  gap:10px;
+ #content h2{
+ color:#3b638b; 
+ border-bottom: 1px dotted #000;
 }
-
-.container {
-  width:90vw;
-}
-
-#content h2 {
-color:#3b638b;
-border-bottom: 1px dotted #ccc;
-background:red;
-}
-
 
 #content p{
-  line-height:1.7;
+  line-height:1.6;
 }
 
 #blog{
   display:flex;
   flex-direction:row;
   justify-content:space-between;
+  flex-wrap: wrap;
   gap:20px;
-  flex-wrap:wrap;
 }
 
 #blog figure{
-  background:red;
   margin:0;
 }
 
-
 #blog .post{
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+  box-shadow: 0 4px 8px rgba(0,0,0,.6);
   padding:10px;
   font-size:.8rem;
   flex:1;
@@ -162,9 +139,39 @@ background:red;
 }
 
 #blog a{
-  color:#3b638b;
+    color:#3B638B;
 }
 
-#blog{
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* --------- Media Queries ----------- */
+
+@media screen and (max-width:500px){
+  
+nav.primary ul {
   flex-direction:column;
+  gap:10px;
+}
+  
+.container{
+  width:90vw;
+}
+  
+  #blog {
+    flex-direction:column;
+  }
+  
 }
