@@ -21,11 +21,17 @@ html {
   width: 1px;
 }
 
+
+/* ---------------resonspive images----------------- */
+img{
+  max-width:100%;
+}
+
 /* ---------------utility classes----------------- */
 
 .container {
+  max-width: 960px;
   width:80vw;
-  max-width: 960px
   margin: 40px auto;
 }
 
@@ -108,4 +114,57 @@ nav.primary ul li a:hover{
   nav.primary ul {
   flex-direction: column;
   gap:10px;
+}
+
+.container {
+  width:90vw;
+}
+
+#content h2 {
+color:#3b638b;
+border-bottom: 1px dotted #ccc;
+background:red;
+}
+
+
+#content p{
+  line-height:1.7;
+}
+
+#blog{
+  display:flex;
+  flex-direction:row;
+  justify-content:space-between;
+  gap:20px;
+  flex-wrap:wrap;
+}
+
+#blog figure{
+  background:red;
+  margin:0;
+}
+
+
+#blog .post{
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+  padding:10px;
+  font-size:.8rem;
+  flex:1;
+}
+
+#blog h2{
+  flex: 0 0 100%;
+}
+
+#blog time.post-date, #blog figcaption{
+  text-transform:uppercase;
+  font-size:.6rem;
+}
+
+#blog a{
+  color:#3b638b;
+}
+
+#blog{
+  flex-direction:column;
 }
